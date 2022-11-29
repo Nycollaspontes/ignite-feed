@@ -46,8 +46,10 @@ export function Post({}) {
           <button type="submit">Publicar</button>
         </footer>
       </form>
-      <Comment />
-      <Comment />
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }
