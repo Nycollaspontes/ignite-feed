@@ -14,7 +14,6 @@ function App() {
         <Sidebar />
         <main>
           <Post author="Nycollas Pontes" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus velit, vitae pharetra magna sollicitudin et. Nunc venenatis magna nec elit tincidunt maximus. Pellentesque laoreet est id ante varius suscipit. Duis sed congue felis." />
-          <Post author="Rodrigo Pereira" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet lacus velit, vitae pharetra magna sollicitudin et. Nunc venenatis magna nec elit tincidunt maximus. Pellentesque laoreet est id ante varius suscipit. Duis sed congue felis." />
         </main>
       </div>
     </>
