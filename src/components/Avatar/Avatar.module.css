@@ -1,4 +1,11 @@
-.cover {
+.avatar {
+    box-sizing: initial;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 8px;
+}
+
+.avatarBorder {
     box-sizing: initial;
     width: 3rem;
     height: 3rem;
