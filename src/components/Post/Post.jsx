@@ -35,7 +35,7 @@ export function Post({ author, content, publishedAt }) {
   }
 
   function deleteComment(comment) {
-    console.log(`Delete your comment ${comment}`);
+    console.log(`Deletar comentário ${comment}`);
   }
 
   return (
@@ -48,18 +48,21 @@ export function Post({ author, content, publishedAt }) {
             <span>{author.role}</span>
           </div>
         </div>
-
-          
+        <time title={DatePublishedFormat} dateTime={publishedAt.toISOString()}>
+          {publishedDateRelativeToNow}
+        </time>
       </header>
 
       <div className={styles.content}>
         {content.map((line) => {
           if (line.type === "paragraph") {
-            return <p >{line.content}</p>;
+            return <p key={line.content}>{line.content}</p>;
           } else if (line.type === "link") {
             return (
-              <p >
-                <a href="#">{line.content}</a>
+              <p>
+                <a href="#" key={line.content}>
+                  {line.content}
+                </a>
               </p>
             );
           }
@@ -81,12 +84,12 @@ export function Post({ author, content, publishedAt }) {
         </footer>
       </form>
       <div className={styles.commentList}>
-        {comments.map((comment) => {
+        {comments.map(comment => {
           return (
             <Comment
               key={comment}
               content={comment}
-              deleteComment={deleteComment}
+              onDeleteComment={deleteComment}
             />
           );
         })}
